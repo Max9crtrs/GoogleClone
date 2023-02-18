@@ -1,0 +1,162 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+a{
+    text-decoration: none;/*Con esta opcion quitamos el subrayado de los links*/
+    cursor: pointer; /*Al pasar el cursor aparece un apuntador*/
+}
+
+header{
+    width: 100%;
+    height: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: flex-end;/*Con esto alineamos el contenido al final de nuestro flex*/
+}
+
+header nav .nav-right-section{
+    width: 250px;
+    height: auto;
+    display: flex;
+    justify-content: center;/*Con esto nuestra lista de alinea una al lado de otra*/
+    list-style: none;/*Eliminamos el estilo de nuestra lista*/
+    align-items: center;
+}
+
+.nav-right-section a{
+    margin-right: 10px;
+    color: #000010;
+}
+
+nav .nav-right-section .menu-icon{
+    background-image: url(https://static.thenounproject.com/png/756729-200.png);
+    background-repeat: no-repeat;/*Que no se repita en nuestro fondo*/
+    background-position: center;/*Alinearlo en el centro de nuestro nav*/
+    background-size: contain;/*Que se contenga en su celda*/
+    width: 25px;
+    height: 25px;
+}
+
+nav .nav-right-section img{
+    border-radius: 50%;/*Que se redondee la imagen*/
+    margin-left: 10px;/*Que se separe de nuestro icono de apps*/
+}
+/*Aquí vamos a estilar main*/
+main{
+    /*margin-top: 100px; dejamos este comentario por si debemos bajar más nuestro main, por el momento va bien así arriba*/
+    text-align: center;/*Aquí vamos a alinear nuestro main para separarlo del header y centrarlo en nuestra página*/
+}
+main .main-logo{
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;/*Para que los botones tengan una separación*/   
+}
+
+main .main-logo img{
+    width: 272px;/*Aquí nosotros inspeccionamos la página oficial de google para sacar las medidas*/
+}
+
+main .main-input{
+    width: 530px;
+    margin: auto;
+    margin-bottom: 35px;/*Así nuestro botones quedan mas abajo*/
+}
+
+main .main-input-container{
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #e1e2e6;/*Inspeccionamos la barra de busqueda con el gotero para poder ver el color que tiene*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none;/*Eliminamos el borde de nuestro input*/
+    outline: none;
+}
+main .main-input-container:hover{
+    box-shadow: 0 1px 6px 0 #20212447; /*Utilizamos hover para que al momento de seleccionar nuestro input podamos ver esa transicion a un tono más oscuo*/
+}
+main .main-input .search-icon{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Vector_search_icon.svg/945px-Vector_search_icon.svg.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+}
+
+main .main-input .micro-icon{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png);
+    background-repeat: no-repeat;
+    background-position:right;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+main .main-input .main-buttons{
+    width: 530px;
+    margin: auto;
+}
+/*Ahora usaremos el inline block para que en lugar de estar uno abajo de otro puedan estar al lado*/
+main .main-buttons div{
+    display: inline-block;
+}
+main .main-buttons button{
+    height: 36px;
+    background-color: f8f9fa;
+    border: none;
+    color: #3c4043;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 10px;
+}
+
+main .main-buttons button:hover{
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 6px 0 #dadce0;
+    color: #202124
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;/*Creamos dos columnas una que viene con un color más oscuro que otro y así podremos dividir el contenido de nuestro footer*/
+    align-items: center;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0
+}
+
+footer .footer-left{
+    justify-content: left;
+}
+
+footer .footer-right{
+    justify-content: right;
+}
+
+footer ul li a{
+    margin: 10px;
+    color: #5f6368;
+}
